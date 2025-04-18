@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); /* Example font */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9fafb; /* Light grey background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.breadcrumb {
+    color: #6b7280; /* Muted grey */
+    margin-bottom: 40px;
+    padding-left: 5%; /* Adjust as needed */
+}
+
+.faq-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto 40px auto; /* Center and add bottom margin */
+    gap: 50px; /* Space between header and accordion */
+    padding: 0 5%; /* Padding on sides */
+    flex-grow: 1; /* Allow container to grow */
+}
+
+.faq-header {
+    flex-basis: 40%; /* Adjust width */
+}
+
+.faq-header h1 {
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.faq-header p {
+    color: #4b5563; /* Darker grey */
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    border: 1px solid #d1d5db; /* Light grey border */
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #f3f4f6; /* Slightly darker grey on hover */
+}
+
+.faq-accordion {
+    flex-basis: 60%; /* Adjust width */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #e5e7eb; /* Very light grey border */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.faq-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #fff3e0; /* Light orange background */
+    color: #fb923c; /* Orange color */
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 1px solid #ffe0b2; /* Lighter orange border */
+}
+
+.faq-item.active .faq-toggle {
+     background-color: #fee2e2; /* Light red background for 'x' */
+     color: #f87171; /* Red color */
+     border-color: #fecaca; /* Lighter red border */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, margin-top 0.3s ease-out;
+    margin-top: 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px; /* Adjust as needed, should be larger than content */
+    margin-top: 15px; /* Space between question and answer */
+    transition: max-height 0.5s ease-in, margin-top 0.3s ease-in;
+}
+
+.btn-tertiary {
+    background-color: #f3f4f6; /* Light grey background */
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 36px); /* Adjust width if needed */
+    color: #374151; /* Dark grey text */
+    transition: background-color 0.2s;
+}
+
+.btn-tertiary:hover {
+     background-color: #e5e7eb; /* Slightly darker grey */
+}
+
+.btn-tertiary .arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #9ca3af; /* Medium grey border */
+    border-radius: 50%;
+    font-size: 0.9rem;
+    color: #6b7280; /* Medium grey */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #fff; /* White background */
+    padding: 40px 5% 20px 5%; /* Padding top/bottom and sides */
+    border-top: 1px solid #e5e7eb; /* Light grey top border */
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px; /* Space between columns */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1; /* Allow columns to grow */
+    min-width: 150px; /* Minimum width before wrapping */
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #111827; /* Darker text */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a,
+.footer-column p {
+    color: #6b7280; /* Grey text */
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    margin-bottom: 10px;
+}
+
+.contact-info .icon,
+.social-icons .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* Add specific icon styles here if using font/SVG */
+}
+
+.social-profiles .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons .icon {
+    width: 28px;
+    height: 28px;
+    background-color: #f3f4f6; /* Light background for icons */
+    border-radius: 50%;
+    color: #6b7280; /* Icon color */
+    text-decoration: none;
+    font-size: 0.9rem; /* Adjust if using actual icons */
+    border: 1px solid #e5e7eb;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid #e5e7eb; /* Light grey line */
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments (optional basic example) */
+@media (max-width: 768px) {
+    .faq-container {
+        flex-direction: column;
+    }
+    .faq-header, .faq-accordion {
+        flex-basis: 100%;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center; /* Center columns on small screens */
+        text-align: center;
+    }
+    .footer-column {
+        min-width: 100%;
+    }
+    .social-profiles .social-icons {
+        justify-content: center;
+    }
+    .contact-info p {
+        justify-content: center;
+    }
+}
+
