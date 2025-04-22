@@ -19,7 +19,7 @@ body {
   .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 32px 36px 0 36px;
     background: #fff;
   }
@@ -54,6 +54,7 @@ body {
   .nav-actions {
     display: flex;
     gap: 10px;
+    margin-left: auto;
   }
   
   .signup-btn {
