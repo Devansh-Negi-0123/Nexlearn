@@ -9,14 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
 
-            // Optional: Close other items when one is opened
-            // faqItems.forEach(otherItem => {
-            //     if (otherItem !== item && otherItem.classList.contains('active')) {
-            //         otherItem.classList.remove('active');
-            //         otherItem.querySelector('.faq-answer').style.maxHeight = null;
-            //         otherItem.querySelector('.faq-toggle').textContent = '+';
-            //     }
-            // });
+        
 
             item.classList.toggle('active');
 
